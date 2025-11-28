@@ -1,0 +1,170 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as fn;
+@use "../abstracts/mixins" as mix;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: fn.fs(body);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: fn.color(text-main);
+  background-color: fn.color(white);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.ptb-40 {
+  padding-top: fn.space(20);
+  padding-bottom: fn.space(10);
+}
+
+.theme-btn {
+  @include mix.btn(primary);
+  @include mix.shine-hover;
+}
+
+.sec-title {
+  margin-bottom: fn.space(10);
+
+  .title-content {
+    text-align: center;
+    font-weight: 700;
+    font-size: fn.fs(sec-title-xl);
+    @include mix.flex-center;
+    gap: fn.space(1.25);
+
+    .sec-title-icon {
+      padding: fn.space(0.5) fn.space(2);
+      background: fn.color(secondary);
+
+      border-radius: fn.radius(pill);
+
+      img {
+        width: fn.rem(20);
+      }
+    }
+  }
+
+  .sec-sub-text {
+    text-align: center;
+    font-size: fn.fs(body-sm);
+  }
+}
+
+.swiper-pagination {
+  position: static !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  transform: none !important;
+
+  .swiper-pagination-bullet {
+    width: fn.rem(20);
+    height: fn.rem(20);
+    opacity: 1;
+    background: fn.color(primary);
+
+    @include mix.respond-max("sm") {
+      width: fn.rem(10) !important;
+      height: fn.rem(10) !important;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: fn.color(primary);
+    width: fn.rem(22);
+    border-radius: fn.rem(10);
+    transition: 0.3s;
+  }
+}
+
+@include mix.respond-max("lg") {
+  .sec-title {
+    margin-bottom: fn.space(8);
+
+    .title-content {
+      font-size: fn.fs(sec-title-lg);
+
+      .sec-title-icon img {
+        width: fn.rem(18);
+      }
+    }
+
+    .sec-sub-text {
+      font-size: fn.fs(body-sm);
+    }
+  }
+}
+
+@include mix.respond-max("md") {
+  .sec-title {
+    margin-bottom: fn.space(7);
+
+    .title-content {
+      font-size: fn.fs(sec-title-md);
+
+      .sec-title-icon {
+        padding: fn.space(0.5) fn.space(1.5);
+
+        img {
+          width: fn.rem(16);
+        }
+      }
+    }
+
+    .sec-sub-text {
+      font-size: fn.fs(body-xs);
+    }
+  }
+
+  .ptb-40 {
+    padding-top: fn.space(10);
+    padding-bottom: fn.space(10);
+  }
+}
+
+@include mix.respond-max("sm") {
+  .sec-title {
+    margin-bottom: fn.space(6);
+
+    .title-content {
+      font-size: fn.fs(sec-title-sm);
+      line-height: 1.3;
+    }
+
+    .sec-sub-text {
+      font-size: fn.fs(body-xxs);
+      padding: 0 fn.space(2.5);
+    }
+  }
+}
+
+@include mix.respond-max("xs") {
+  .sec-title {
+    .title-content {
+      font-size: fn.fs(sec-title-xs);
+
+      .sec-title-icon img {
+        width: fn.rem(14);
+      }
+    }
+  }
+}

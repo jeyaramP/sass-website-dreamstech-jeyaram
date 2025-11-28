@@ -1,0 +1,73 @@
+@use "sass:map";
+@use "variables" as v;
+@use "functions" as fn;
+
+
+@mixin respond-max($bp-name) {
+  @media (max-width: fn.bp($bp-name)) {
+    @content;
+  }
+}
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+@mixin btn($bg-color-name, $text-color-name: text-light) {
+  background-color: fn.color($bg-color-name);
+  color: fn.color($text-color-name);
+  padding: fn.space(2) fn.space(3.5);
+  border-radius: fn.radius(pill);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: fn.space(1.5);
+  font-size: fn.fs(button);
+  font-weight: 600;
+  border: none;
+}
+ 
+@mixin shine-hover {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transform: skewX(-25deg);
+    animation: shine 2s infinite linear;
+  }
+}
+ 
+@mixin hero-bg($file) {
+  background: url("../../assets/images/#{$file}") no-repeat center/cover;
+}
+ 
+@mixin bg-image($file) {
+  background: url("../../assets/images/#{$file}") no-repeat center/cover;
+}
+ 
+@mixin card-pos($top, $left, $rotate, $z) {
+  top: $top;
+  left: $left;
+  transform: rotate($rotate);
+  z-index: $z;
+}

@@ -1,0 +1,78 @@
+@use "sass:map";
+
+$colors: (
+  primary: #008a1e,
+  secondary: #84d003,
+  accent-yellow: #fdaf22,
+  accent-orange: #ff7300,
+  accent-red: #fd3c22,
+  bg-hero: #040404,
+  bg-dark: #000000,
+  bg-muted: #fbfbfb,
+  bg-footer: #000000,
+  bg-subscribe: #1a1a1a,
+  white: #ffffff,
+  text-main: #000000,
+  text-light: #ffffff,
+  text-muted: #777777,
+  text-subtle: #cccccc,
+  border-soft: #e5e5e5,
+  border-mid: #dbdbdb,
+  border-gray: #e3e3e3,
+  gray-700: #7c7c7c,
+  gray-600: #5f5f5f,
+  gray-500: #9f9f9f
+);
+$font-sizes: (
+  hero-title-xl: 3.5rem, 
+  hero-title-lg: 2.875rem, 
+  hero-title-md: 2.375rem, 
+  hero-title-sm: 2rem, 
+  hero-title-xs: 1.625rem, 
+  sec-title-xl: 2rem, 
+  sec-title-lg: 1.75rem, 
+  sec-title-md: 1.5rem, 
+  sec-title-sm: 1.25rem, 
+  sec-title-xs: 1.125rem, 
+  body: 1rem, 
+  body-sm: 0.9375rem, 
+  body-xs: 0.875rem, 
+  body-xxs: 0.8125rem, 
+  tiny: 0.75rem, 
+  badge: 0.875rem,
+
+  card-title-lg: 1.25rem, 
+  card-title-md: 1.1875rem,
+  card-title-sm: 1.125rem,
+  card-title-xs: 1rem,
+
+  button: 0.9375rem  
+);
+
+ $breakpoints: (
+  "xxl": 1400px,
+  "xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px,
+  "xs": 420px,
+  "chip-sm": 600px
+);
+
+
+$radii: (
+  sm: 6px,
+  md: 10px,
+  lg: 12px,
+  card: 12px,
+  pill: 20px,
+  round: 50%
+);
+
+$shadows: (
+  chip-hover: 0 6px 18px rgba(0, 0, 0, 0.1),
+  card-strong: 0 15px 35px rgba(0, 0, 0, 0.35)
+);
+
+$space-unit: 4px;  
+$font-base: 16;

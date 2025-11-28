@@ -1,0 +1,88 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/functions" as fn;
+@use "../../abstracts/mixins" as mix;
+
+.counter-box {
+  background: fn.color(bg-dark);
+  color: fn.color(white);
+  border-radius: fn.radius(card);
+  padding: fn.space(10) fn.space(5);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: fn.space(5);
+
+  .counter-item {
+    h3 {
+      font-size: fn.fs(hero-title-sm);
+      font-weight: 700;
+      margin-bottom: fn.space(2);
+    }
+
+    p {
+      font-size: fn.fs(body-xs);
+      color: fn.color(text-subtle);
+      margin: 0;
+    }
+  }
+}
+
+@include mix.respond-max("xl") {
+  .counter-item {
+    h3 {
+      font-size: fn.fs(sec-title-lg);
+    }
+
+    p {
+      font-size: fn.fs(body-xxs);
+    }
+  }
+}
+
+@include mix.respond-max("lg") {
+  .counter-box {
+    grid-template-columns: repeat(2, 1fr);
+    padding: fn.space(8.75) fn.space(4.5);
+    gap: fn.space(7.5);
+  }
+
+  .counter-item {
+    h3 {
+      font-size: fn.fs(sec-title-md);
+    }
+  }
+}
+
+@include mix.respond-max("md") {
+  .counter-item {
+    h3 {
+      font-size: fn.fs(sec-title-sm);
+    }
+
+    p {
+      font-size: fn.fs(body-xxs);
+    }
+  }
+}
+
+@include mix.respond-max("sm") {
+  .counter-box {
+    grid-template-columns: 1fr;
+    gap: fn.space(5.5);
+    padding: fn.space(7.5) fn.space(4);
+  }
+
+  .counter-item h3 {
+    font-size: fn.fs(sec-title-xs);
+  }
+}
+
+@include mix.respond-max("xs") {
+  .counter-item h3 {
+    font-size: fn.fs(body);
+  }
+
+  .counter-item p {
+    font-size: fn.fs(tiny);
+  }
+}

@@ -1,0 +1,24 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/functions" as fn;
+@use "../../abstracts/mixins" as mix;
+
+.slogans-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: fn.color(white);
+
+  .marquee-track {
+    display: flex;
+    gap: fn.space(2.5);
+    animation: scroll-slogan 15s linear infinite;
+    white-space: nowrap;
+
+    span {
+      flex-shrink: 0;
+      font-size: fn.fs(hero-title-sm);
+      font-weight: 700;
+      color: fn.color(secondary);
+      text-transform: uppercase;
+    }
+  }
+}

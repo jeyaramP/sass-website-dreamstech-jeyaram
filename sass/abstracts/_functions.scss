@@ -1,0 +1,39 @@
+@use "sass:map";
+@use "sass:math";
+@use "variables" as v;
+ 
+@function color($name) {
+  @return map.get(v.$colors, $name);
+}
+ 
+@function fs($token) {
+  @return map.get(v.$font-sizes, $token);
+}
+ 
+@function space($n) {
+  @return $n * v.$space-unit;
+}
+ 
+@function radius($token) {
+  @return map.get(v.$radii, $token);
+}
+ 
+@function bp($name) {
+  @return map.get(v.$breakpoints, $name);
+}
+ 
+@function shadow($name) {
+  @return map.get(v.$shadows, $name);
+}
+  
+@function rem($px) {
+  @return math.div($px, v.$font-base) * 1rem;
+}
+
+@function width($px) {
+  @return rem($px);
+}
+
+@function height($px) {
+  @return rem($px);
+}

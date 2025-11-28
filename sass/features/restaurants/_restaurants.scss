@@ -1,0 +1,276 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/functions" as fn;
+@use "../../abstracts/mixins" as mix;
+
+.restaurants-sec {
+  .restaurantsSwiper {
+    position: relative;
+    padding: fn.space(7.5) 0;
+  }
+
+  .rest-pagination {
+    margin-top: fn.space(6.25);
+  }
+
+  .row {
+    @include mix.respond-max("lg") {
+      row-gap: fn.space(6);
+    }
+  }
+
+  .sec-title {
+    @include mix.respond-max("md") {
+      margin-bottom: fn.space(6.5);
+    }
+  }
+
+  .rest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: fn.space(10);
+
+    .res-view-btn {
+      text-decoration: none;
+      padding: fn.space(2.5) fn.space(5);
+      background: fn.color(bg-dark);
+      color: fn.color(white);
+      border-radius: fn.rem(35);
+      font-size: fn.fs(body-xs);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.23);
+        transform: translateY(-5px) scale(1.02);
+      }
+
+      @include mix.respond-max("sm") {
+        padding: fn.space(2) fn.space(4);
+        font-size: fn.fs(body-xxs);
+      }
+    }
+
+    @include mix.respond-max("sm") {
+      margin-top: fn.space(7.5);
+    }
+  }
+}
+
+.restaurants-card {
+  padding: fn.space(5);
+  border: 1px solid fn.color(border-mid);
+  border-radius: fn.radius(sm);
+  display: flex;
+  flex-direction: column;
+  gap: fn.space(2.5);
+  transition:
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+  &:hover {
+    box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px) scale(1.02);
+  }
+
+  .card-img {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    .card-heart-icon {
+      background: fn.color(white);
+      border-radius: fn.radius(round);
+      width: fn.rem(30);
+      height: fn.rem(30);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: fn.rem(15);
+      right: fn.rem(18);
+      color: fn.color(gray-700);
+      border: 1px solid fn.color(gray-600);
+
+      i {
+        font-size: fn.fs(tiny);
+      }
+
+      @include mix.respond-max("sm") {
+        width: fn.rem(28);
+        height: fn.rem(28);
+        top: fn.rem(10);
+        right: fn.rem(12);
+      }
+    }
+  }
+
+  .restaurants-card-title {
+    font-size: fn.fs(card-title-lg);
+    margin: 0;
+
+    @include mix.respond-max("xl") {
+      font-size: fn.fs(card-title-md);
+    }
+
+    @include mix.respond-max("lg") {
+      font-size: fn.fs(card-title-sm);
+    }
+
+    @include mix.respond-max("md") {
+      font-size: fn.fs(card-title-xs);
+      text-align: center;
+    }
+
+    @include mix.respond-max("sm") {
+      font-size: fn.fs(body);
+    }
+
+    @include mix.respond-max("xs") {
+      font-size: fn.fs(body-xs);
+    }
+  }
+
+  .restaurants-card-loc {
+    margin: 0;
+    font-size: fn.fs(body-xs);
+
+    i {
+      color: fn.color(primary);
+    }
+
+    @include mix.respond-max("md") {
+      text-align: center;
+      font-size: fn.fs(body-xs);
+    }
+  }
+
+  .contact-box {
+    padding: fn.space(2) fn.space(3);
+    border: 1px solid fn.color(border-gray);
+    border-radius: fn.radius(sm);
+    background-color: fn.color(bg-muted);
+
+    p {
+      margin: 0;
+      font-size: fn.fs(body-xs);
+
+      i {
+        color: fn.color(primary);
+      }
+
+      &:first-child {
+        margin-bottom: fn.space(1.25);
+      }
+
+      @include mix.respond-max("md") {
+        text-align: center;
+      }
+    }
+  }
+
+  .rating-review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .rating-stars {
+      display: flex;
+      align-items: center;
+      gap: fn.space(2.5);
+
+      ul {
+        padding: 0;
+        display: flex;
+        gap: fn.space(1.25);
+        margin: 0;
+
+        .star,
+        .star-none {
+          list-style: none;
+          font-size: fn.fs(tiny);
+        }
+
+        .star i {
+          color: fn.color(accent-yellow);
+        }
+
+        .star-none i {
+          color: fn.color(gray-500);
+        }
+      }
+
+      .rating-count {
+        margin: 0;
+        font-weight: 500;
+        font-size: fn.fs(body-xs);
+        color: fn.color(text-main);
+
+        span {
+          color: fn.color(gray-600);
+        }
+
+        @include mix.respond-max("md") {
+          font-size: fn.fs(body-xs);
+        }
+      }
+    }
+
+    .rating-btn {
+      font-weight: 600;
+      color: fn.color(text-main);
+      text-decoration: none;
+      font-size: fn.fs(body-xs);
+
+      @include mix.respond-max("lg") {
+        width: 100%;
+        text-align: center;
+        padding: fn.space(2) 0;
+        background: fn.color(bg-muted);
+        border-radius: fn.rem(30);
+        color: fn.color(text-main);
+      }
+
+      @include mix.respond-max("xs") {
+        padding: fn.space(1.5) 0;
+        font-size: fn.fs(tiny);
+      }
+    }
+
+    @include mix.respond-max("lg") {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: fn.space(2.5);
+    }
+
+    @include mix.respond-max("md") {
+      align-items: center;
+    }
+  }
+
+  @include mix.respond-max("xl") {
+    padding: fn.space(4.5);
+
+    .restaurants-card-loc,
+    .contact-box p {
+      font-size: fn.fs(body-xs);
+    }
+  }
+
+  @include mix.respond-max("lg") {
+    padding: fn.space(4.5);
+  }
+
+  @include mix.respond-max("md") {
+    padding: fn.space(4);
+    gap: fn.space(3);
+  }
+
+  @include mix.respond-max("sm") {
+    padding: fn.space(3.75);
+  }
+
+  @include mix.respond-max("xs") {
+    padding: fn.space(3.5);
+  }
+}

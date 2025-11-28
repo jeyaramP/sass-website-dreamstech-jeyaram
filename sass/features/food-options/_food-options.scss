@@ -1,0 +1,132 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/functions" as fn;
+@use "../../abstracts/mixins" as mix;
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin: fn.space(5) 0;
+  white-space: nowrap;
+  position: relative;
+
+  &.reverse {
+    .marquee-inner {
+      animation: scroll-right 70s linear infinite;
+    }
+  }
+
+  &:hover {
+    .marquee-inner {
+      animation-play-state: paused;
+    }
+  }
+
+  .marquee-inner {
+    display: inline-flex;
+    align-items: center;
+    gap: fn.space(4);
+    animation: scroll-left 70s linear infinite;
+  }
+}
+
+.chip {
+  padding: fn.space(1.5) fn.space(2.5);
+  background: fn.color(white);
+  border: 1px solid fn.color(border-soft);
+  border-radius: fn.radius(pill);
+  font-size: fn.fs(body-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: fn.space(2.5);
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    box-shadow: fn.shadow(chip-hover);
+  }
+
+  .chip-icon {
+    width: fn.rem(40);
+    height: fn.rem(40);
+    border-radius: fn.radius(round);
+    display: block;
+    padding: fn.space(1.25);
+    border: 1px solid fn.color(border-soft);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: fn.bp(chip-sm)) {
+  .chip {
+    font-size: fn.fs(body-xxs);
+    padding: fn.space(2) fn.space(4);
+  }
+}
+
+@include mix.respond-max("xl") {
+  .marquee-inner {
+    gap: fn.space(3.5);
+    animation-duration: 60s;
+  }
+
+  .chip {
+    font-size: fn.fs(body-xxs);
+    padding: fn.space(1.5) fn.space(3.5);
+  }
+}
+
+@include mix.respond-max("lg") {
+  .marquee-inner {
+    gap: fn.space(3);
+    animation-duration: 55s;
+  }
+
+  .chip {
+    font-size: fn.fs(body-xxs);
+    padding: fn.space(1.5) fn.space(3);
+  }
+
+  .chip .chip-icon {
+    width: fn.rem(32);
+    height: fn.rem(32);
+  }
+}
+
+@include mix.respond-max("md") {
+  .marquee {
+    margin: fn.space(3.5) 0;
+  }
+
+  .marquee-inner {
+    gap: fn.space(2.5);
+    animation-duration: 50s;
+  }
+
+  .chip {
+    font-size: fn.fs(body-xxs);
+    padding: fn.space(1.5) fn.space(2.5);
+  }
+}
+
+@include mix.respond-max("sm") {
+  .marquee-inner {
+    gap: fn.space(2);
+    animation-duration: 45s;
+  }
+
+  .chip {
+    font-size: fn.fs(tiny);
+    padding: fn.space(1.5) fn.space(2);
+  }
+}
+
+@include mix.respond-max("xs") {
+  .chip {
+    font-size: fn.fs(tiny);
+    padding: fn.space(1.25) fn.space(2);
+  }
+}

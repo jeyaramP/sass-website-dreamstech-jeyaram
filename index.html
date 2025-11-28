@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jmngmgjs</title>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav-left">
+          <a href="#" class="main-logo">
+            <img src="assets/images/logo.png" alt="Logo">
+          </a>
+        </div>
+
+        <div class="nav-center">
+          <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Restaurants</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Pages</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-right">
+          <button class="icon-btn"><i class="fa-regular fa-moon"></i></button>
+
+          <button class="icon-btn cart-btn">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="cart-badge">2</span>
+          </button>
+
+
+
+          <a class="login-btn" href="#"><i class="fa-solid fa-lock"></i> Login</a>
+
+          <button class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MOBILE SIDEBAR MENU -->
+  <!-- MOBILE SIDEBAR MENU -->
+  <div class="mobile-sidebar">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <img src="assets/images/logo.png" alt="Mobile Logo">
+      </div>
+      <button class="close-menu"><i class="fa-solid fa-xmark"></i></button>
+
+    </div>
+
+
+    <ul class="mobile-nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Restaurants</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+    </ul>
+
+    <a href="#" class="mobile-login-btn">
+      <i class="fa-solid fa-lock"></i> Login
+    </a>
+  </div>
+
+  <div class="overlay"></div>
+
+
+
+
+  <!-- Hero Section -->
+
+  <section class="hero-sections">
+    <div class="container">
+      <div class="hero-contents-box">
+        <div class="hero-contents">
+          <div class="hero-badge">
+            <p><span>10K+ </span>Happy Customers</p>
+          </div>
+          <h1 class="hero-title">
+            The Ultimate One Stop for <br>
+            <span>Every Craving</span>
+          </h1>
+          <p class="hero-subtext">
+            From comforting classics to bold new flavors, we bring together everything you love in one
+            place,
+            making it easier than ever to satisfy every craving without compromise
+          </p>
+          <a class="hero-btn animation-btn" href="#">
+            <i class="fa-solid fa-lock"></i> Order Now
+          </a>
+        </div>
+        <div class="hero-image-wrap">
+          <div class="food-cards">
+            <div class="food-card-item">
+              <img src="assets/images/hero-food/1.jpg" alt="Pizza">
+            </div>
+
+            <div class="food-card-item">
+              <img src="assets/images/hero-food/2.jpg" alt="Burger">
+            </div>
+
+            <div class="food-card-item">
+              <img src="assets/images/hero-food/3.jpg" alt="Cheesy Pizza">
+            </div>
+
+            <div class="food-card-item">
+              <img src="assets/images/hero-food/4.jpg" alt="Hot Dog">
+            </div>
+
+            <div class="food-card-item">
+              <img src="assets/images/hero-food/5.jpg" alt="Stacked Salad">
+            </div>
+
+            <div class="food-card-item">
+              <img src="assets/images/hero-food/6.jpg" alt="Pancakes">
+            </div>
+          </div>
+        </div>
+        <div class="hero-shapes">
+          <div class="shape-item">
+            <img src="assets/images/hero-food/shape1.png" alt="">
+          </div>
+          <div class="shape-item">
+            <img src="assets/images/hero-food/shape2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="food-options-sec ptb-40">
+    <div class="sec-title">
+      <h2 class="title-content"> <span class="sec-title-icon"> <img src="assets/images/title-icon.png" alt="">
+        </span>Explore Delicious Options</h2>
+      <p class="sec-sub-text">Browse through a wide range of cuisines and discover dishes you'll love.</p>
+    </div>
+
+
+    <div class="marquee">
+      <div class="marquee-inner">
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Chinese.png"
+              alt=""></span>Chinese Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Indian.png" alt=""></span>Indian
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Mexican.png"
+              alt=""></span>Mexican Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Japanese.png"
+              alt=""></span>Japanese Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Thai.png" alt=""></span>Thai Food
+        </div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Italian.png"
+              alt=""></span>Italian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Mediterranean.png"
+              alt=""></span>Mediterranean Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Malaysian.png"
+              alt=""></span>Malaysian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/American.png"
+              alt=""></span>American Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Korean.png" alt=""></span>Korean
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/French.png" alt=""></span>French
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Spanish.png"
+              alt=""></span>Spanish Food</div>
+
+        <!-- Duplicate for infinite effect -->
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Chinese.png"
+              alt=""></span>Chinese Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Indian.png" alt=""></span>Indian
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Mexican.png"
+              alt=""></span>Mexican Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Japanese.png"
+              alt=""></span>Japanese Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Thai.png" alt=""></span>Thai Food
+        </div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Italian.png"
+              alt=""></span>Italian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Mediterranean.png"
+              alt=""></span>Mediterranean Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Malaysian.png"
+              alt=""></span>Malaysian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/American.png"
+              alt=""></span>American Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Korean.png" alt=""></span>Korean
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/French.png" alt=""></span>French
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Spanish.png"
+              alt=""></span>Spanish Food</div>
+      </div>
+    </div>
+
+    <div class="marquee reverse">
+      <div class="marquee-inner">
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/German.png" alt=""></span>German
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Burma.png" alt=""></span>Burma
+          Food</div>
+
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Thai.png" alt=""></span>Thai Food
+        </div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Italian.png"
+              alt=""></span>Italian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Mediterranean.png"
+              alt=""></span>Mediterranean Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Turkish.png"
+              alt=""></span>Turkish Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Russian.png"
+              alt=""></span>Russian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/French.png" alt=""></span>French
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Spanish.png"
+              alt=""></span>Spanish Food</div>
+
+        <!-- Duplicate -->
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/German.png" alt=""></span>German
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Burma.png" alt=""></span>Burma
+          Food</div>
+
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Thai.png" alt=""></span>Thai Food
+        </div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Italian.png"
+              alt=""></span>Italian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Mediterranean.png"
+              alt=""></span>Mediterranean Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Turkish.png"
+              alt=""></span>Turkish Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Russian.png"
+              alt=""></span>Russian Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/French.png" alt=""></span>French
+          Food</div>
+        <div class="chip"><span class="chip-icon"><img src="assets/images/food-options/Spanish.png"
+              alt=""></span>Spanish Food</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer-card-section">
+    <div class="container">
+      <div class="row justify-content-center g-3">
+        <div class="col-lg-4 col-md-6">
+          <div class="offer-card  offer-card-bg-color-1">
+            <div class="offer-content">
+              <h3 class="offer-title">Taste the Juicy Burger!</h3>
+              <p class="offer-sub-text">Enjoy freshly grilled burgers <br> with cheesy layers</p>
+              <a href="" class="theme-btn animation-btn"><i class="fa-solid fa-lock"></i> Order Now</a>
+            </div>
+            <div class="offer-image-box offer-image-box--burger">
+              <div class="offer-image">
+                <div class="offer-main-img ">
+                  <img src="assets/images/offer-section/Burger.png" alt="">
+                </div>
+                <div class="discount-badge">
+                  <img src="assets/images/offer-section/Discount-Badge.png" alt="">
+                </div>
+                <div class="discount-badge">
+                  <img src="assets/images/offer-section/Discount-heart.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="offer-card offer-card-bg-color-2">
+            <div class="offer-content">
+              <h3 class="offer-title">Dive Into Creamy Pasta!</h3>
+              <p class="offer-sub-text">Rich sauces, fresh herbs, & a <br> taste you’ll love</p>
+              <a href="" class="theme-btn animation-btn"><i class="fa-solid fa-lock"></i> Order Now</a>
+            </div>
+            <div class="offer-image-box offer-image-box--pasta">
+              <div class="offer-image offer-image-center">
+                <div class="offer-main-img ">
+                  <img src="assets/images/offer-section/pasta.png" alt="">
+                </div>
+                <div class="discount-badge">
+                  <img src="assets/images/offer-section/Discount-Badge.png" alt="">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="offer-card offer-card-bg-color-3">
+            <div class="offer-content">
+              <h3 class="offer-title">Savor the Cheesy Pizza!</h3>
+              <p class="offer-sub-text">Freshly baked with extra <br> mozzarella & toppings.</p>
+              <a href="" class="theme-btn animation-btn"><i class="fa-solid fa-lock"></i> Order Now</a>
+            </div>
+            <div class="offer-image-box offer-image-box--pizza">
+              <div class="offer-image">
+                <div class="offer-main-img">
+                  <img src="assets/images/offer-section/Pizza.png" alt="">
+                </div>
+                <div class="discount-badge">
+                  <img src="assets/images/offer-section/Discount-Badge.png" alt="">
+                </div>
+                <div class="discount-badge">
+                  <img src="assets/images/offer-section/Discount-heart.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurants-sec ptb-40">
+    <div class="container">
+      <div class="sec-title">
+        <h2 class="title-content"> <span class="sec-title-icon"> <img src="assets/images/title-icon.png" alt="">
+          </span>Discover Nearby Restaurants</h2>
+        <p class="sec-sub-text">Explore top rated eateries around you and satisfy every craving.</p>
+      </div>
+
+      <div class="swiper restaurantsSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="restaurants-card">
+              <div class="card-img">
+                <img src="assets/images/restaurants-card/food-feast.png" alt="">
+                <div class="card-heart-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <h2 class="restaurants-card-title">Food Feast</h2>
+              <p class="restaurants-card-loc"><i class="fa-solid fa-location-dot"></i> Maple Street, Los Angeles 21</p>
+              <div class="contact-box">
+                <p><i class="fa-solid fa-phone"></i> +1 675 018 7525</p>
+                <p><i class="fa-solid fa-envelope"></i> support@foodfeast.com</p>
+              </div>
+              <div class="rating-review">
+                <div class="rating-stars">
+                  <ul>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star-none"><i class="fa-solid fa-star"></i></li>
+                  </ul>
+                  <p class="rating-count">4.0 <span>(135 Reviews)</span> </p>
+                </div>
+
+                <a href="" class="rating-btn">View Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="restaurants-card">
+              <div class="card-img">
+                <img src="assets/images/restaurants-card/urban-bites.png" alt="">
+                <div class="card-heart-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <h2 class="restaurants-card-title">Urban Bites</h2>
+              <p class="restaurants-card-loc"><i class="fa-solid fa-location-dot"></i> Lakeview Street, Seattle 29</p>
+              <div class="contact-box">
+                <p><i class="fa-solid fa-phone"></i> +1 347 209 4685</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@urbanbites.com</p>
+              </div>
+              <div class="rating-review">
+                <div class="rating-stars">
+                  <ul>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star-none"><i class="fa-solid fa-star"></i></li>
+                  </ul>
+                  <p class="rating-count">5.0 <span>(140 Reviews)</span> </p>
+                </div>
+
+                <a href="" class="rating-btn">View Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="restaurants-card">
+              <div class="card-img">
+                <img src="assets/images/restaurants-card/crave-corner.png" alt="">
+                <div class="card-heart-icon">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <h2 class="restaurants-card-title">Crave Corner</h2>
+              <p class="restaurants-card-loc"><i class="fa-solid fa-location-dot"></i> Greenway Road, Houston 63</p>
+              <div class="contact-box">
+                <p><i class="fa-solid fa-phone"></i> +1 320 863 4259</p>
+                <p><i class="fa-solid fa-envelope"></i> support@cravecorner.com</p>
+              </div>
+              <div class="rating-review">
+                <div class="rating-stars">
+                  <ul>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star"><i class="fa-solid fa-star"></i></li>
+                    <li class="star-none"><i class="fa-solid fa-star"></i></li>
+                  </ul>
+                  <p class="rating-count">4.0 <span>(170 Reviews)</span> </p>
+                </div>
+
+                <a href="" class="rating-btn">View Details <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="swiper-button-prev rest-prev"></div>
+        <div class="swiper-button-next rest-next"></div> -->
+
+
+      </div>
+
+      <div class="swiper-pagination rest-pagination"></div>
+
+      <div class="rest-btn">
+        <a class="res-view-btn" href="">View All Restaurants <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slogans-marquee ptb-40">
+    <div class="marquee-track">
+      <span>FRESH CHOICES •</span>
+      <span>INFINITE MENUS •</span>
+      <span>READY ON MORE •</span>
+      <span>FRESH CHOICES •</span>
+      <span>INFINITE MENUS •</span>
+      <span>READY ON MORE •</span>
+      <span>FRESH CHOICES •</span>
+      <span>INFINITE MENUS •</span>
+      <span>READY ON MORE •</span>
+    </div>
+  </section>
+
+
+
+  <section class="app-order-section ptb-40">
+    <div class="container">
+      <div class="app-order-container">
+        <div class="app-order-content">
+          <h2>Order Food Anytime, Anywhere!</h2>
+          <p>Download our app to browse menus, grab exclusive deals, and track your delivery in real-time.</p>
+
+          <ul class="features-list">
+            <li><img src="assets/images/Feature-Icon.png" alt=""> Browse 1000+ restaurants</li>
+            <li><img src="assets/images/Feature-Icon.png" alt=""> Discover top-rated dishes near you</li>
+            <li><img src="assets/images/Feature-Icon.png" alt=""> Get exclusive discounts & offers</li>
+            <li><img src="assets/images/Feature-Icon.png" alt=""> Track your order in real-time</li>
+          </ul>
+
+          <div class="store-buttons">
+            <a href="#" class="store-btn google-play">
+              <img src="assets/images/Google-play.png" alt="">
+            </a>
+            <a href="#" class="store-btn app-store">
+              <img src="assets/images/App-Store.png" alt="">
+            </a>
+          </div>
+        </div>
+
+        <div class="app-order-image">
+          <img src="assets/images/order.png" alt="Delivery Girl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-section ptb-40">
+    <div class="container">
+      <div class="sec-title">
+        <h2 class="title-content"> <span class="sec-title-icon"> <img src="assets/images/title-icon.png" alt="">
+          </span>Discover Nearby Restaurants</h2>
+        <p class="sec-sub-text">Explore top rated eateries around you and satisfy every craving.</p>
+      </div>
+
+      <div class="swiper testimonial-row testimonialSwiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="testimonial-card swiper-slide">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <h3 class="review-title">My Favorite Food Hub</h3>
+
+            <p class="review-text">
+              I love how quick the delivery is! My food always arrives hot and fresh, just like dining at the restaurant
+              itself.
+            </p>
+
+            <div class="profile">
+              <img src="assets/images/testimonial/1.png" alt="">
+              <div>
+                <h4>Peter Marshall</h4>
+                <span>2 days ago</span>
+              </div>
+            </div>
+            <img class="quote-icon" src="assets/images/testimonial/quote-icon.png" alt="">
+          </div>
+          <!-- Card 2 -->
+          <div class="testimonial-card swiper-slide">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <h3 class="review-title">Always Fresh & On Time</h3>
+            <p class="review-text">The food always arrives hot and on time. Love the variety of restaurants available—
+              it feels like every craving has a solution!
+            </p>
+
+            <div class="profile">
+              <img src="assets/images/testimonial/2.png" alt="">
+              <div>
+                <h4>Dawn Flores</h4>
+                <span>2 days ago</span>
+              </div>
+            </div>
+
+            <img class="quote-icon" src="assets/images/testimonial/quote-icon.png" alt="">
+          </div>
+          <!-- Card 3 -->
+          <div class="testimonial-card swiper-slide">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+
+            <h3 class="review-title">My Favorite Food Hub</h3>
+            <p class="review-text">
+              It feels like the restaurant experience at home. The quality of food and packaging makes it worth every
+              order.
+            </p>
+
+            <div class="profile">
+              <img src="assets/images/testimonial/3.png" alt="">
+              <div>
+                <h4>Tobias Wray</h4>
+                <span>2 days ago</span>
+              </div>
+            </div>
+
+            <img class="quote-icon" src="assets/images/testimonial/quote-icon.png" alt="">
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="swiper-pagination custom-pagination"></div>
+    </div>
+  </section>
+
+
+  <section class="counter-section ptb-40">
+    <div class="container">
+      <div class="counter-box">
+        <div class="counter-item">
+          <h3>1,000+</h3>
+          <p>Dishes Served</p>
+        </div>
+
+        <div class="counter-item">
+          <h3>500+</h3>
+          <p>Orders Delivered Daily</p>
+        </div>
+
+        <div class="counter-item">
+          <h3>200+</h3>
+          <p>Restaurants Partnered</p>
+        </div>
+
+        <div class="counter-item">
+          <h3>4.8/5</h3>
+          <p>Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="blog-section ptb-40">
+    <div class="container">
+
+      <div class="sec-title">
+        <h2 class="title-content"> <span class="sec-title-icon"> <img src="assets/images/title-icon.png" alt="">
+          </span>Bites & Blogs</h2>
+        <p class="sec-sub-text">Tips, trends, and tasty stories straight from the world of food.</p>
+      </div>
+
+
+      <div class="swiper blogSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="blog-card">
+              <div class="blog-img">
+                <img src="assets/images/blog/1.png" alt="">
+              </div>
+
+              <div class="blog-meta">
+                <div class="author">
+                  <img src="assets/images/blog/user1.png" alt=""> <span>Alex Haley</span>
+                </div>
+                <div class="date"><i class="fa-solid fa-calendar-days"></i> 12 Sep 2025</div>
+              </div>
+              <div class="blog-content">
+                <h3 class="blog-title-text">Why Global Cuisines Inspire Us?</h3>
+                <p class="blog-desc">See how trying foods from different cultures opens up new flavors and experiences.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="blog-card">
+              <div class="blog-img">
+                <img src="assets/images/blog/2.png" alt="">
+              </div>
+
+              <div class="blog-meta">
+                <div class="author">
+                  <img src="assets/images/blog/user2.png" alt=""> <span>Rosie Hopkins</span>
+                </div>
+                <div class="date"><i class="fa-solid fa-calendar-days"></i> 25 Aug 2025</div>
+              </div>
+              <div class="blog-content">
+                <h3 class="blog-title-text">Food Trends That Define 2025</h3>
+                <p class="blog-desc">Explore the latest dining habits and innovations shaping kitchens this year.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="blog-card">
+              <div class="blog-img">
+                <img src="assets/images/blog/3.png" alt="">
+              </div>
+
+              <div class="blog-meta">
+                <div class="author">
+                  <img src="assets/images/blog/user3.png" alt=""> <span>John Cohen</span>
+                </div>
+                <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 Jul 2025</div>
+              </div>
+              <div class="blog-content">
+                <h3 class="blog-title-text">Fresh & Organic Eating Made Easy</h3>
+                <p class="blog-desc">Learn how to include farm fresh, chemical-free ingredients in daily meals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination blog-pagination"></div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer-section">
+    <div class="container">
+      <div class="subscribe-container">
+        <div class="subscribe-left">
+          <h3>Join Our Foodie Club</h3>
+          <p>Get the latest deals, new dishes, and foodie perks delivered straight to your inbox.</p>
+        </div>
+        <form class="subscribe-right">
+          <input type="email" placeholder="yourmail@example.com">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <hr class="footer-line">
+      <div class="row footer-content pt-4">
+
+        <!-- Column 1 -->
+        <div class="col-lg-3 col-md-12">
+          <div class="footer-brand-block">
+            <div class="brand-logo-line">
+              <img src="assets/images/logo-white.png" alt="Logo">
+            </div>
+
+            <p class="brand-desc">
+              Fresh, healthy, and delicious meals delivered straight from
+              your favorite local restaurants.
+            </p>
+
+            <div class="footer-social-icons">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Support -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Support</h5>
+          <ul class="footer-links">
+            <li><a href="#">User Profile</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Desk</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Menu -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Our Menu</h5>
+          <ul class="footer-links">
+            <li><a href="#">Chinese</a></li>
+            <li><a href="#">Mexican</a></li>
+            <li><a href="#">Indian</a></li>
+            <li><a href="#">Italian</a></li>
+            <li><a href="#">Japanese</a></li>
+            <li><a href="#">Mediterranean</a></li>
+          </ul>
+        </div>
+
+        <!-- Useful Links -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <h5 class="footer-title">Useful Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Payment & Tax</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Registration</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="footer-contact-block">
+            <h5 class="footer-title">Get In Touch</h5>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <div>
+                <h6>Customer Support</h6>
+                <span>+12 3344453</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <h6>Email Address</h6>
+                <span>sample@example.com</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h6>Location</h6>
+                <span>45, NY Street, sylhet, USA</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <hr class="footer-line">
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Dreams Food. All rights are reserved.</p>
+
+        <div class="payments">
+          <div class="payment-title">
+            <span>Acceptable Payments</span>
+          </div>
+          <div class="payment-image">
+            <img src="assets/images/footer/paypal.png" alt="">
+            <img src="assets/images/footer/visa.png" alt="">
+            <img src="assets/images/footer/master-card.png" alt="">
+            <img src="assets/images/footer/apple-pay.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-shape">
+      <img class="shape" src="assets/images/footer/shape1.png" alt="">
+      <img class="shape" src="assets/images/footer/shape2.png" alt="">
+      <img class="shape" src="assets/images/footer/shape3.png" alt="">
+      <img class="shape" src="assets/images/footer/shape4.png" alt="">
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  <script>
+    // Restaurants Swiper
+    const restaurantSwiper = new Swiper(".restaurantsSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      grabCursor: true,
+
+      pagination: {
+        el: ".rest-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 },
+        992: { slidesPerView: 2 },
+        576: { slidesPerView: 2 },
+        0: { slidesPerView: 1 },
+      },
+    });
+
+    // Testimonial Swiper
+    const testimonialSwiper = new Swiper(".testimonialSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      grabCursor: true,
+      pagination: {
+        el: ".custom-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 },
+        992: { slidesPerView: 2 },
+        576: { slidesPerView: 2 },
+        0: { slidesPerView: 1 },
+      },
+    });
+
+    // Blog Swiper
+    const blogSwiper = new Swiper(".blogSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      grabCursor: true,
+
+      pagination: {
+        el: ".blog-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        1200: { slidesPerView: 3 },
+        992: { slidesPerView: 2 },
+        576: { slidesPerView: 2 },
+        0: { slidesPerView: 1 },
+      },
+    });
+  </script>
+
+
+  <script>
+    const sidebar = document.querySelector(".mobile-sidebar");
+    const openBtn = document.querySelector(".mobile-menu-btn");
+    const closeBtn = document.querySelector(".close-menu");
+    const overlay = document.querySelector(".overlay");
+
+    openBtn.addEventListener("click", () => {
+      sidebar.classList.add("open");
+      overlay.classList.add("show");
+      document.body.style.overflow = "hidden";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+      document.body.style.overflow = "auto";
+    });
+
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+      document.body.style.overflow = "auto";
+    });
+
+  </script>
+
+
+
+</body>
+
+</html>

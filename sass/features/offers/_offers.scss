@@ -1,0 +1,223 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/functions" as fn;
+@use "../../abstracts/mixins" as mix;
+
+.offer-card-section {
+  .offer-card-bg-color-1 {
+    background: linear-gradient(170.21deg, #e033e3 7.36%, rgba(255, 129, 228, 0.78) 83.72%);
+  }
+
+  .offer-card-bg-color-2 {
+    background: linear-gradient(170.21deg, fn.color(accent-yellow) 7.36%, fn.color(accent-orange) 83.72%);
+  }
+
+  .offer-card-bg-color-3 {
+    background: linear-gradient(170.21deg, rgba(253, 60, 34, 0.83) 7.36%, fn.color(accent-orange) 83.72%);
+  }
+
+  .offer-card {
+    padding: fn.space(10);
+    border-radius: fn.radius(md);
+    position: relative;
+    overflow: hidden;
+
+    .offer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: fn.space(2.5);
+
+      .offer-title {
+        color: fn.color(white);
+        margin: 0;
+        font-size: fn.fs(card-title-lg);
+        font-weight: 700;
+      }
+
+      .offer-sub-text {
+        color: fn.color(white);
+        margin: 0;
+        font-size: fn.fs(body);
+      }
+
+      .theme-btn {
+        @include mix.btn(primary);
+        @include mix.shine-hover;
+      }
+    }
+
+    .offer-image-box {
+      position: absolute;
+      right: fn.rem(-64);
+      bottom: fn.rem(-84);
+      width: fn.rem(246);
+      height: fn.rem(246);
+      border-radius: fn.radius(round);
+      overflow: hidden;
+
+      .offer-image {
+        position: relative;
+        top: fn.rem(35);
+
+        .offer-main-img {
+          img {
+            width: fn.rem(190);
+          }
+        }
+
+        .discount-badge {
+          position: absolute;
+
+          &:nth-of-type(2) {
+            top: fn.rem(-10);
+            left: fn.rem(100);
+          }
+
+          &:nth-of-type(3) {
+            top: fn.rem(-22);
+            right: fn.rem(60);
+          }
+        }
+      }
+    }
+  }
+
+  .offer-image-box--burger {
+    background-color: #fecdff;
+  }
+
+  .offer-image-box--pasta {
+    background-color: transparent;
+    overflow: visible !important;
+  }
+
+  .offer-image-box--pizza {
+    background-color: #ffc89a;
+  }
+
+  .offer-image-center {
+    top: fn.rem(-52) !important;
+    left: fn.rem(-68) !important;
+
+    .offer-main-img {
+      img {
+        width: fn.rem(250) !important;
+      }
+    }
+
+    .discount-badge {
+      top: fn.rem(35) !important;
+      right: fn.rem(-2) !important;
+      left: fn.rem(170) !important;
+    }
+  }
+
+  @include mix.respond-max("xl") {
+    .offer-card {
+      padding: fn.space(8);
+
+      .offer-content {
+        .offer-title {
+          font-size: fn.fs(sec-title-md);
+        }
+      }
+    }
+  }
+
+  @include mix.respond-max("lg") {
+    .offer-card {
+      padding: fn.space(7.5);
+      border-radius: fn.radius(card);
+
+      .offer-content {
+        gap: fn.space(1.5);
+
+        .offer-title {
+          font-size: fn.fs(sec-title-sm);
+        }
+
+        .offer-sub-text {
+          font-size: fn.fs(body-xs);
+        }
+      }
+
+      .offer-image-box {
+        right: fn.rem(-64);
+        width: fn.rem(205);
+        height: fn.rem(220);
+
+        .offer-main-img {
+          img {
+            width: fn.rem(140);
+          }
+        }
+      }
+    }
+
+    .offer-image-center {
+      top: fn.rem(-38) !important;
+      left: fn.rem(-50) !important;
+
+      .offer-main-img {
+        img {
+          width: fn.rem(228) !important;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+      .discount-badge {
+        top: fn.rem(35) !important;
+        right: 0 !important;
+        left: fn.rem(140) !important;
+      }
+    }
+  }
+
+  @include mix.respond-max("md") {
+    .offer-card {
+      padding: fn.space(6.5);
+
+      .offer-content {
+        .offer-title {
+          font-size: fn.fs(sec-title-sm);
+        }
+      }
+    }
+
+    .offer-image-center {
+      top: fn.rem(-30) !important;
+      left: fn.rem(-40) !important;
+
+      .discount-badge {
+        left: fn.rem(160) !important;
+        top: fn.rem(46) !important;
+      }
+    }
+  }
+
+  @include mix.respond-max("sm") {
+    .offer-card {
+      padding: fn.space(5.5);
+
+      .offer-content {
+        .offer-title {
+          font-size: fn.fs(sec-title-xs);
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+
+  @include mix.respond-max("xs") {
+    .offer-card {
+      padding: fn.space(4.5);
+
+      .offer-content {
+        .offer-title {
+          font-size: fn.fs(body);
+        }
+      }
+    }
+  }
+}

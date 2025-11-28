@@ -1,0 +1,199 @@
+@use "../../abstracts/variables" as v;
+@use "../../abstracts/functions" as fn;
+@use "../../abstracts/mixins" as mix;
+
+.testimonial-section {
+  text-align: center;
+
+  .testimonial-row {
+    margin-top: fn.space(10);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: fn.space(6.25);
+  }
+
+  .testimonial-card {
+    position: relative;
+    background: fn.color(white);
+    border: 1px solid #eeeeee;
+    border-radius: fn.radius(card);
+    padding: fn.space(6.25);
+    text-align: left;
+    transition:
+      box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+
+    &:hover {
+      box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.1);
+      transform: translateY(-10px) scale(1.02);
+    }
+
+    .stars {
+      i {
+        color: #ffb800;
+        font-size: fn.fs(body-xs);
+      }
+    }
+
+    .review-title {
+      font-size: fn.fs(card-title-lg);
+      font-weight: 700;
+      margin: fn.space(2.5) 0 fn.space(2);
+    }
+
+    .review-text {
+      font-size: fn.fs(body);
+      color: #444444;
+      line-height: 1.6;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-top: fn.space(4.5);
+      gap: fn.space(2.5);
+
+      img {
+        width: fn.rem(44);
+        height: fn.rem(44);
+        border-radius: fn.radius(round);
+        object-fit: cover;
+      }
+
+      h4 {
+        font-size: fn.fs(body);
+        font-weight: 700;
+        margin: 0;
+      }
+
+      span {
+        font-size: fn.fs(body-xxs);
+        color: fn.color(text-muted);
+      }
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: fn.space(3.5);
+      right: fn.space(5.5);
+      width: fn.rem(45);
+
+      &.light {
+        opacity: 0.15;
+      }
+    }
+  }
+
+  .custom-pagination {
+    margin-top: fn.space(6.25);
+    position: relative;
+  }
+
+  @include mix.respond-max("lg") {
+    .testimonial-row {
+      grid-template-columns: 1fr 1fr;
+      gap: fn.space(5);
+    }
+
+    .testimonial-card {
+      padding: fn.space(5.5);
+    }
+  }
+
+  @include mix.respond-max("xl") {
+    .testimonial-card {
+      .review-title {
+        font-size: fn.fs(sec-title-sm);
+      }
+
+      .review-text {
+        font-size: fn.fs(body-sm);
+      }
+
+      .profile {
+        h4 {
+          font-size: fn.fs(body-sm);
+        }
+
+        span {
+          font-size: fn.fs(tiny);
+        }
+      }
+    }
+  }
+
+  @include mix.respond-max("md") {
+    .testimonial-row {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-card {
+      padding: fn.space(5);
+      text-align: center;
+
+      .profile {
+        justify-content: center;
+
+        img {
+          width: fn.rem(40);
+          height: fn.rem(40);
+        }
+      }
+
+      .quote-icon {
+        width: fn.rem(40);
+        right: fn.space(3.75);
+      }
+
+      .review-title {
+        font-size: fn.fs(sec-title-xs);
+      }
+
+      .review-text {
+        font-size: fn.fs(body-sm);
+      }
+    }
+  }
+
+  @include mix.respond-max("sm") {
+    .testimonial-card {
+      padding: fn.space(4.5);
+
+      .review-title {
+        font-size: fn.fs(body);
+      }
+
+      .review-text {
+        font-size: fn.fs(body-xxs);
+        line-height: 1.5;
+      }
+
+      .quote-icon {
+        width: fn.rem(34);
+        right: fn.space(2.5);
+        top: fn.space(2.5);
+      }
+    }
+  }
+
+  @include mix.respond-max("xs") {
+    .testimonial-card {
+      padding: fn.space(4);
+
+      .review-title {
+        font-size: fn.fs(body-xs);
+      }
+
+      .profile {
+        img {
+          width: fn.rem(36);
+          height: fn.rem(36);
+        }
+
+        h4 {
+          font-size: fn.fs(body-xxs);
+        }
+      }
+    }
+  }
+}
