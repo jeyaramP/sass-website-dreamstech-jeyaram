@@ -2077,6 +2077,10 @@ a {
   .footer-section .subscribe-left h3 {
     font-size: 1.25rem;
   }
+  .footer-section .footer-social-icons {
+    display: flex;
+    justify-content: flex-start;
+  }
   .footer-section .subscribe-left p,
   .footer-section .subscribe-right input,
   .footer-section .subscribe-right button {
@@ -2109,6 +2113,10 @@ a {
   }
   .footer-section .footer-brand-block {
     text-align: center;
+  }
+  .footer-section .footer-social-icons {
+    display: flex;
+    justify-content: flex-start;
   }
   .footer-section .footer-social-icons a {
     margin-right: 6px;
@@ -2144,6 +2152,10 @@ a {
   .footer-section .subscribe-container {
     gap: 16px;
     padding: 20px 15px;
+  }
+  .footer-section .footer-social-icons {
+    display: flex;
+    justify-content: flex-start;
   }
   .footer-section .brand-logo-line img {
     width: 11.25rem;

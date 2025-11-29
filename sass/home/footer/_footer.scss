@@ -310,6 +310,11 @@
       font-size: fn.fs(sec-title-sm);
     }
 
+    .footer-social-icons{
+      display: flex;
+    justify-content: flex-start;
+    }
+
     .subscribe-left p,
     .subscribe-right input,
     .subscribe-right button {
@@ -345,6 +350,12 @@
     .footer-brand-block {
       text-align: center;
     }
+
+     .footer-social-icons{
+      display: flex;
+    justify-content: flex-start;
+    }
+
 
     .footer-social-icons {
       a {
@@ -388,6 +399,12 @@
       gap: fn.space(4);
       padding: fn.space(5) fn.space(3.75);
     }
+
+     .footer-social-icons{
+      display: flex;
+    justify-content: flex-start;
+    }
+
 
     .brand-logo-line img {
       width: fn.rem(180);
